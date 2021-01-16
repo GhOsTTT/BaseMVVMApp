@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cardlistpage.view.CardDetailFragment">
+
+    <ImageView
+        android:id="@+id/poke_backdrop_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/poke_hp_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_star_shape"
+        android:backgroundTint="@color/black"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/poke_backdrop_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/poke_backdrop_image_view"
+
+        />
+
+    <ImageView
+        android:id="@+id/poke_card_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:elevation="5dp"
+        android:minWidth="100dp"
+        android:transitionName="imageView"
+        app:layout_collapseMode="parallax"
+        app:layout_constraintBottom_toBottomOf="@+id/poke_backdrop_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poke_backdrop_image_view" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/poke_overview_text_view"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poke_card_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/poke_backdrop_image_view" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/poke_attacks_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/poke_overview_text_view"
+        app:layout_constraintStart_toStartOf="@+id/poke_attacks_title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/poke_attacks_title_text_view"
+        tools:text="@string/attacks" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/poke_attacks_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attacks"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/poke_overview_text_view"
+        app:layout_constraintStart_toStartOf="@+id/poke_card_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/poke_card_image_view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cardListFragment">
+
+
+    <fragment
+        android:id="@+id/cardListFragment"
+        android:name="com.pasaoglu.basemvvmapp.ui.carddetailpage.view.CardListFragment"
+        android:label="@string/poke_cards"
+        tools:layout="@layout/card_list_fragment">
+
+        <action
+            android:id="@+id/action_cardListFragment_to_cardDetailFragment"
+            app:destination="@id/cardDetailFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardDetailFragment"
+        android:name="com.pasaoglu.basemvvmapp.ui.cardlistpage.view.CardDetailFragment"
+        android:label="Card: {cardTitle}"
+        tools:layout="@layout/card_detail_fragment">
+        <argument
+            android:name="cardId"
+            app:argType="string" />
+        <argument
+            android:name="cardTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="posterPath"
+            app:argType="string"
+            app:nullable="true" />
+      <!--  <argument
+            android:name="voteAverage"
+            app:argType="float"
+            />
+        <argument
+            android:name="backdropPath"
+            app:argType="string"
+            app:nullable="true" /> !-->
+    </fragment>
+</navigation>
